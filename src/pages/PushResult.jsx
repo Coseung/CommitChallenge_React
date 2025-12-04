@@ -21,7 +21,8 @@ import {
   Branch,
   EmptyState,
   EmptyIcon,
-  EmptyText
+  EmptyText,
+  MemoButton
 } from './PushResult.styled';
 
 const PushResult = () => {
@@ -47,6 +48,12 @@ const PushResult = () => {
     navigate(ROUTES.LOGIN);
   };
 
+  const handleDetail =(detailId) =>{
+    navigate(ROUTES.DETAIL(detailId))
+  };
+   const handleMemoList = () => {
+    navigate(ROUTES.MEMOLIST);
+  };
   return (
     <Container>
       
@@ -62,15 +69,18 @@ const PushResult = () => {
         
         <ActionBox>
           <RefreshButton onClick={handleRefresh} disabled={loading}>
-            {loading ? '⏳ 확인 중...' : '🔄 새로고침'}
+            {loading ? '⏳ 확인 중...' : ' 새로고침'}
           </RefreshButton>
+          <MemoButton onClick={handleMemoList}>
+            메모 목록
+          </MemoButton>
         </ActionBox>
 
         {status && <StatusMessage>{status}</StatusMessage>}
         {pushHistory.length > 0 ? (
           <List>
             {pushHistory.map(push => (
-              <Item key={push.id}>
+              <Item key={push.id} onClick={()=> {handleDetail(push.id)}}>
                 <Time>
                   🕒 {new Date(push.created_at).toLocaleTimeString('ko-KR')}
                 </Time>
