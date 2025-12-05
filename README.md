@@ -50,6 +50,12 @@ src
 ```
 ## ✨ 주요 기능 (Key Features)
 
+| 페이지 이름 | 화면 예시 |
+|:---:|:---|
+| **푸시 기록 페이지** | ![](./src/assets/main.gif) |
+| **푸시 상세 페이지** | ![](./src/assets/detail.gif) |
+| **메모 기록 페이지** | ![](./src/assets/list.gif) |
+
 ### 1. 깃허브 잔디 확인 (GitHub API 연동)
 * GitHub REST API를 호출하여 사용자의 이벤트 내역을 가져옵니다.
 * 가져온 데이터 중 `PushEvent`와 `오늘 날짜`를 필터링하여 당일의 잔디 심기 여부를 시각적으로 보여줍니다.
