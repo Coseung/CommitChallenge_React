@@ -38,22 +38,22 @@
 
 ```bash
 src
-├── 📂 assets          # 이미지 및 정적 파일
+├── 📂 assets          
 ├── 📂 components      # 전역 상태 관리 및 공통 로직
-│   ├── 📄 GithubContext.jsx  # 깃허브 API 호출 및 데이터 가공
+│   ├── 📄 GithubContext.jsx  # 깃허브 API 호출 및 데이터 
 │   ├── 📄 MemoContext.jsx    # 메모 CRUD 및 로컬스토리지 동기화
 │   ├── 📄 UserContext.jsx    # 로그인/회원가입 및 유저 세션 관리
 │   └── 📄 useInput.jsx       # 입력 폼 핸들링 커스텀 훅
 ├── 📂 pages           # 페이지 컴포넌트 및 스타일
 │   ├── 📄 LoginForm.jsx      # 로그인 페이지
-│   ├── 📄 SignupForm.jsx     # 회원가입 (깃허브 닉네임 검증)
+│   ├── 📄 SignupForm.jsx     # 회원가입 
 │   ├── 📄 PushResult.jsx     # 메인 (오늘의 잔디 확인)
 │   ├── 📄 PushDetail.jsx     # 상세 (커밋 정보 확인 및 메모 작성)
 │   └── 📄 MemoList.jsx       # 메모 목록 및 수정/삭제
 ├── 📂 routes          # 라우팅 설정
 │   ├── 📄 routes.jsx         # Protected Route 구현
 │   └── 📄 routesPath.js      # 경로 상수 관리
-└── 📄 App.jsx         # Provider 설정
+└── 📄 App.jsx        
 ```
 ## ✨ 주요 기능 (Key Features)
 
